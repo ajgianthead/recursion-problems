@@ -13,6 +13,13 @@ range(7, 6); // []
 
 function range(start, end) {
   // Your code here 
+  if(end < start){
+    return []
+  }
+  if(start === end-1){
+    return [start]
+  }
+  return [start].concat(range(start+1, end))
 }
 
 
